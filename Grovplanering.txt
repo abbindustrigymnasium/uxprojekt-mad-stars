@@ -1,7 +1,0 @@
-Nya bilder på bakelser
-Ordentlig mockup - alla vyer i detalj
-Kassörvy - inloggning med mail
-Bagarvy - inloggning med mail
-Menyvy - välkomstsida - valsida
-Inforuta till varje bakelse
-Utcheckningsvy - kundvagn - betalmetod - slutförd betalning
