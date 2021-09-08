@@ -45,7 +45,7 @@
 
 <style>
   .background {
-    background-image: url("C:\utveckling\ux-mad-stars\Frontend\src\assets\homebackground.png");
+    background-image: url("../assets/homebackground.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
