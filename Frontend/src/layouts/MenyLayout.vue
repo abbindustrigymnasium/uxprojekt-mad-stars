@@ -119,7 +119,7 @@ export default {
 
 <style>
   .bg-image {
-    background-image: url(https://raw.githubusercontent.com/abbindustrigymnasium/uxprojekt-mad-stars/main/Frontend/src/assets/homebackground.png?token=ANBBONGK22C7QKA2GD22GITBG6YAY);
+    background-image: url(https://raw.githubusercontent.com/abbindustrigymnasium/uxprojekt-mad-stars/main/Frontend/src/assets/jungle-background.png?token=ANBBONGNLDJBBGOXIRVBYSDBHBKJK);
     background-repeat: no-repeat;
     background-size: cover;
   }
