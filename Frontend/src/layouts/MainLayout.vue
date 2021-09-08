@@ -18,8 +18,7 @@
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
-
-    <q-drawer
+      <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
       bordered
@@ -37,8 +36,8 @@
           v-bind="link"
         />
       </q-list>
+      <q-btn color="white" text-color="black" label="Meny" to="pages/meny" />
     </q-drawer>
-
     <q-page-container>
       <router-view />
     </q-page-container>

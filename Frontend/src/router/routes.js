@@ -13,7 +13,13 @@ const routes = [
       { path: "cashier", component: () => import("pages/cashier.vue") }
     ]
   },
-
+  {
+    path: '/meny',
+    component: () => import('layouts/MenyLayout.vue'),
+    children: [
+      { path: 'Meny', component: () => import('pages/Meny.vue') }
+    ]
+  },
   // Always leave this as last one,
   // but you can also remove it
   {
