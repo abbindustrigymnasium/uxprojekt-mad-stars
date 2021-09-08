@@ -1,116 +1,65 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+  <q-layout class="background">
+    <q-footer class="bg-color">
+        <q-toolbar class="toolbar">
+          <!-- <div class="q-pa-md q-gutter-sm">
+            <q-btn align="left" class="btn-fixed-width" color="primary" label="Align to left" />
+            <q-btn align="right" class="btn-fixed-width" color="secondary" label="Align to right" />
+            <q-btn align="between" class="btn-fixed-width" color="accent" label="Align between" icon="flight_takeoff" />           
+          </div> -->
+         
+          <div class="q-pa-md q-gutter-sm">          
+            <q-btn class="full-width" flat style="color: #000000" label="Tap to order" to="/meny" />            
+          </div>
+          
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
-      <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
-      <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
-
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-      <q-btn color="white" text-color="black" label="Meny" to="pages/meny" />
-    </q-drawer>
-    <q-page-container>
-      <router-view />
-    </q-page-container>
+           <!-- <div class="q-pa-md doc-container">
+            <div class="row items-start"> 
+              <div class="col">
+                <q-btn 
+                    class="cancel"
+                    label="Cancel"
+                    to="/"
+                />
+              </div>
+              <div class="col">
+                <q-btn 
+                    class="cart"
+                    icon="shopping_cart"
+                    to="/cart"
+                />
+              </div>
+              <div class="col">
+                <q-btn 
+                    class="check-out"
+                    label="To Check-Out"
+                    to="/check-out"
+                />
+              </div>
+            </div>
+          </div> -->
+        </q-toolbar>
+      </q-footer>
   </q-layout>
 </template>
 
-<script>
-import EssentialLink from 'components/EssentialLink.vue'
-
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+<style>
+  .background {
+    background-image: url("C:\utveckling\ux-mad-stars\Frontend\src\assets\homebackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-];
-
-import { defineComponent, ref } from 'vue'
-
-export default defineComponent({
-  name: 'MainLayout',
-
-  components: {
-    EssentialLink
-  },
-
-  setup () {
-    const leftDrawerOpen = ref(false)
-
-    return {
-      essentialLinks: linksList,
-      leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
+  .bg-color {
+    background-color: rgb(221, 229, 180);
+    align-items: center;
+    justify-content: center;
   }
-})
-</script>
+  .order-btn {
+    justify-self: center;
+  }
+  .toolbar {
+    height: 10%;
+    justify-items: center;
+    align-items: center;
+  }
+</style>
